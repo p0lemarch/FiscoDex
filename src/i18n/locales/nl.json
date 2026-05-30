@@ -1,0 +1,592 @@
+{
+  "app": {
+    "title": "FiscoDex",
+    "subtitle": "Belgian Tax Encyclopedia",
+    "search": "Search taxes...",
+    "allTypes": "All",
+    "backToList": "Back to all taxes",
+    "previous": "Previous",
+    "next": "Next",
+    "description": "Description",
+    "noResults": "No taxes found",
+    "taxCount": "{{count}} entries discovered",
+    "discovered": "Belastingen Geïdentificeerd: {{count}} / 153",
+    "unknownTax": "??? - Onontdekte Belasting",
+    "hp": "HP",
+    "strengths": "Sterktes",
+    "weaknesses": "Zwaktes",
+    "attacks": "Aanvallen",
+    "evolution": "Evolutie",
+    "evolvesFrom": "Evolueert van",
+    "evolvesTo": "Evolueert naar",
+    "wildEncounter": "Een wilde {{tax}} is verschenen!"
+  },
+  "types": {
+    "income": "Inkomstenbelasting",
+    "corporate": "Vennootschapsbelasting",
+    "consumption": "Verbruiksbelasting",
+    "investment": "Investeringsbelasting",
+    "property": "Vermogensbelasting (Onroerend)",
+    "vehicle": "Verkeersbelasting",
+    "energy": "Energieheffing",
+    "municipal": "Gemeentebelasting",
+    "wealth": "Vermogensbelasting",
+    "special": "Bijzondere Belasting",
+    "mechanism": "Mechanisme"
+  },
+  "rarity": {
+    "common": "Gewoon",
+    "uncommon": "Ongewoon",
+    "rare": "Zeldzaam",
+    "mythical": "Mythisch",
+    "legendary": "Legendarisch"
+  },
+  "regions": {
+    "federal": "Federaal",
+    "flanders": "Vlaanderen",
+    "wallonia": "Wallonië",
+    "brussels": "Brussel",
+    "municipal": "Gemeentelijk",
+    "all": "Alle Gewesten"
+  },
+  "taxes": {
+    "personenbelasting": {
+      "name": "Personenbelasting",
+      "officialName": "Personenbelasting",
+      "description": "Een vraatzuchtig monster dat zich voedt met het brutoloon van hardwerkende burgers. Het wordt sterker naarmate je meer verdient en straft succes met meedogenloze efficiëntie. Verbergt zich vaak achter vooraf ingevulde belastingbrieven om slachtoffers in slaap te sussen.",
+      "strengths": [
+        "Middenklasse",
+        "Alleenstaanden",
+        "Opslag"
+      ],
+      "weaknesses": [
+        "Panama Papers",
+        "Creatieve Boekhouders",
+        "Verhuizen naar Monaco"
+      ],
+      "attacks": [
+        {
+          "name": "Progressieve Schijvenaanval",
+          "damage": "50%",
+          "effect": "Halveert de waarde van je welverdiende promotie."
+        },
+        {
+          "name": "Kafkiaanse Administratie",
+          "damage": "10 HP",
+          "effect": "Verwart het doelwit. Doelwit verliest 3 beurten door te proberen inloggen op Tax-on-Web."
+        }
+      ]
+    },
+    "vennootschapsbelasting": {
+      "name": "Vennootschapsbelasting",
+      "officialName": "Vennootschapsbelasting",
+      "description": "Een kolossale titaan die de bedrijfswinsten bewaakt. Hij ziet er intimiderend uit, maar slimme trainers weten precies hoe ze hem kunnen kalmeren met een spervuur van aftrekposten en fiscale trucjes.",
+      "strengths": [
+        "Winsten",
+        "Kleine Ondernemingen",
+        "Eerlijke Boekhouding"
+      ],
+      "weaknesses": [
+        "Multinationals",
+        "Kaaimaneilanden",
+        "Overgedragen Verliezen"
+      ],
+      "attacks": [
+        {
+          "name": "Audit Brul",
+          "damage": "30 HP",
+          "effect": "Verlamt het doelwit uit angst voor een grondige fiscale inspectie."
+        },
+        {
+          "name": "Dividend Drain",
+          "damage": "25%",
+          "effect": "Zuigt inkomsten weg voordat ze de aandeelhouders bereiken."
+        }
+      ]
+    },
+    "btw": {
+      "name": "BTW",
+      "officialName": "Belasting over de toegevoegde waarde",
+      "description": "Een alomtegenwoordig fantoom dat op elk kasticket op de loer ligt. Het voegt stilletjes 21% toe aan bijna alles wat je koopt, en verdwijnt in de staatskas voordat je het doorhebt.",
+      "strengths": [
+        "Consumenten",
+        "Winkeliers",
+        "Luxeartikelen"
+      ],
+      "weaknesses": [
+        "Zwarte Markt",
+        "Contante Betalingen",
+        "Brood"
+      ],
+      "attacks": [
+        {
+          "name": "Onzichtbare Toeslag",
+          "damage": "21%",
+          "effect": "Maakt de eindafrekening onverwacht pijnlijk."
+        },
+        {
+          "name": "Kwartaalaangifte",
+          "damage": "15 HP",
+          "effect": "Veroorzaakt zware stress bij zelfstandige doelwitten elke 3 maanden."
+        }
+      ]
+    },
+    "roerende_voorheffing": {
+      "name": "Roerende Voorheffing",
+      "officialName": "Roerende voorheffing",
+      "description": "Een behendige dief die 30% van je dividenden steelt voordat ze je bankrekening bereiken. Hij beweegt zo snel dat veel trainers niet eens beseffen dat ze bestolen zijn.",
+      "strengths": [
+        "Beleggers",
+        "Dividenden",
+        "Intresten"
+      ],
+      "weaknesses": [
+        "Gereglementeerde Spaarrekeningen",
+        "Meerwaarden",
+        "Helemaal Niets Bezitten"
+      ],
+      "attacks": [
+        {
+          "name": "Bron Afpakker",
+          "damage": "30%",
+          "effect": "Onderschept inkomende buit en stuurt deze naar de Schatkist."
+        }
+      ]
+    },
+    "onroerende_voorheffing": {
+      "name": "Onroerende Voorheffing",
+      "officialName": "Onroerende voorheffing",
+      "description": "Een territoriaal monster dat elk jaar een stukje van je huis opeist. Zijn kracht vermenigvuldigt zich wild afhankelijk van de gemeente waarin je je bevindt.",
+      "strengths": [
+        "Huiseigenaren",
+        "Huisbazen",
+        "Grote Huizen"
+      ],
+      "weaknesses": [
+        "Huurders",
+        "Bescheiden Woningen",
+        "Leven in een Tent"
+      ],
+      "attacks": [
+        {
+          "name": "Opcentiemen Klap",
+          "damage": "Variabel",
+          "effect": "Vermenigvuldigt de basisschade op basis van het humeur van de lokale burgemeester."
+        }
+      ]
+    },
+    "verkeersbelasting": {
+      "name": "Verkeersbelasting",
+      "officialName": "Verkeersbelasting",
+      "description": "Een snel bewegend wezen dat jaagt op iedereen met een nummerplaat. Het richt zich specifiek op de paardenkracht en de uitstoot van je gekozen voertuig.",
+      "strengths": [
+        "SUV's",
+        "Diesel",
+        "Oude Auto's"
+      ],
+      "weaknesses": [
+        "Fietsen",
+        "Wandelen",
+        "EV's"
+      ],
+      "attacks": [
+        {
+          "name": "Emissie Zuiger",
+          "damage": "20 HP",
+          "effect": "Straft je omdat je geen Tesla hebt gekocht."
+        }
+      ]
+    },
+    "biv": {
+      "name": "BIV",
+      "officialName": "Belasting op de inverkeerstelling",
+      "description": "Een meedogenloze poortwachter die je de weg verspert wanneer je een nieuwe auto probeert in te schrijven. Je moet zijn losgeld betalen voordat je legaal de weg op mag.",
+      "strengths": [
+        "Nieuwe Auto's",
+        "Geïmporteerde Auto's",
+        "Zware Voet"
+      ],
+      "weaknesses": [
+        "Tweedehands EV's",
+        "Bedrijfswagens",
+        "Leasing"
+      ],
+      "attacks": [
+        {
+          "name": "Welkomstklap",
+          "damage": "Hoog",
+          "effect": "Plundert je spaarrekening onmiddellijk bij aankoop van een auto."
+        }
+      ]
+    },
+    "fermette_tax": {
+      "name": "Fermettetaks",
+      "officialName": "Geen",
+      "description": "Een legendarische cryptide waar politici vaak over praten, maar die zelden in het wild wordt gezien. Het bedreigt degenen die neppe boerderijtjes hebben gebouwd in landelijke gebieden.",
+      "strengths": [
+        "Stedenbouwkundigen",
+        "Groene Politici"
+      ],
+      "weaknesses": [
+        "Kiezersverzet",
+        "Plattelandsburgemeesters",
+        "De Realiteit"
+      ],
+      "attacks": [
+        {
+          "name": "Politieke Bluf",
+          "damage": "0 HP",
+          "effect": "Maakt het doelwit bang, maar doet uiteindelijk helemaal niets."
+        }
+      ]
+    },
+    "accijnzen_brandstoffen": {
+      "name": "Accijnzen Brandstoffen",
+      "officialName": "Accijnzen op brandstoffen",
+      "description": "Een parasitaire entiteit die vastzit aan elke benzinepomp. Het drinkt je geld op telkens wanneer je tankt, en wordt dikker terwijl je portemonnee lichter wordt.",
+      "strengths": [
+        "Pendelaars",
+        "Vrachtwagens",
+        "Winterverwarming"
+      ],
+      "weaknesses": [
+        "Fietsen",
+        "Elektrische Treinen",
+        "Thuiswerken"
+      ],
+      "attacks": [
+        {
+          "name": "Pomp Shock",
+          "damage": "35 HP",
+          "effect": "Veroorzaakt pure psychologische schade bij het tankstation."
+        }
+      ]
+    },
+    "nettarieven": {
+      "name": "Nettarieven",
+      "officialName": "Nettarieven",
+      "description": "Een schimmig netwerkmonster dat op de loer ligt in je elektriciteitsfactuur. Niemand begrijpt echt zijn anatomie, maar het vreet een enorm deel van je energiekosten op.",
+      "strengths": [
+        "Winter",
+        "Wasmachines",
+        "Piekuren"
+      ],
+      "weaknesses": [
+        "Zonnepanelen",
+        "Off-grid leven",
+        "Kaarsen"
+      ],
+      "attacks": [
+        {
+          "name": "Capaciteitspiek",
+          "damage": "45 HP",
+          "effect": "Slaat je neer als je het waagt te strijken terwijl je aan het bakken bent."
+        }
+      ]
+    },
+    "kijk_en_luistergeld": {
+      "name": "Kijk- en Luistergeld",
+      "officialName": "Kijk- en luistergeld",
+      "description": "Een archaïsche geest uit het verleden die je televisie- en radiotoestellen teisterde. Hij eiste tol, louter voor het voorrecht om uitzendgolven te ontvangen.",
+      "strengths": [
+        "Oudere Mensen",
+        "Beeldbuis-tv's",
+        "Antennes"
+      ],
+      "weaknesses": [
+        "Internet",
+        "Streaming",
+        "De 21e eeuw"
+      ],
+      "attacks": [
+        {
+          "name": "Statische Ruis",
+          "damage": "15 HP",
+          "effect": "Een irritant gezoem dat langzaam je geduld uitput."
+        }
+      ]
+    },
+    "zorgpremie": {
+      "name": "Zorgpremie",
+      "officialName": "Vlaamse Zorgpremie",
+      "description": "De sluwe evolutie van het Kijk- en Luistergeld. Hij vermomt zich als een welwillende genezingsspreuk, maar is eigenlijk een verplichte vlaktaks die aan elke volwassene in Vlaanderen wordt opgelegd.",
+      "strengths": [
+        "Vlaamse Overheid",
+        "Vergrijzing"
+      ],
+      "weaknesses": [
+        "Wonen in Wallonië",
+        "Verhuizen naar het Buitenland"
+      ],
+      "attacks": [
+        {
+          "name": "Forfaitaire Klap",
+          "damage": "62 HP",
+          "effect": "Neemt elk jaar een vast bedrag, ongeacht je inkomen."
+        }
+      ]
+    },
+    "erfbelasting": {
+      "name": "Erfbelasting",
+      "officialName": "Erfbelasting",
+      "description": "De ultieme Magere Hein van de belastingen. Hij wacht geduldig aan het einde van je levensreis om een flink stuk te oogsten van alles wat je ooit hebt gespaard.",
+      "strengths": [
+        "De Dood",
+        "Verre Verwanten",
+        "Onvoorbereide Nalatenschappen"
+      ],
+      "weaknesses": [
+        "Trustfondsen",
+        "Schenken bij leven",
+        "Onsterfelijkheid"
+      ],
+      "attacks": [
+        {
+          "name": "Grafroof",
+          "damage": "Tot 80%",
+          "effect": "Eist een massaal deel van de erfenis op als deze naar een niet-verwant gaat."
+        }
+      ]
+    },
+    "tob": {
+      "name": "Beurstaks",
+      "officialName": "Taks op beursverrichtingen",
+      "description": "Een micro-parasiet die zich vasthecht aan elke transactie. Hij knabbelt kleine beetjes van je kapitaal af, telkens als je een aandeel koopt of verkoopt.",
+      "strengths": [
+        "Daytraders",
+        "Paniekverkopen",
+        "ETF's"
+      ],
+      "weaknesses": [
+        "Vasthouden tot de dood",
+        "Buitenlandse Brokers",
+        "Crypto"
+      ],
+      "attacks": [
+        {
+          "name": "Transactie Knabbel",
+          "damage": "1,32%",
+          "effect": "Veroorzaakt chip damage op elk accumulerend fonds dat je aanraakt."
+        }
+      ]
+    },
+    "effectenrekeningtaks": {
+      "name": "Effectenrekeningtaks",
+      "officialName": "Effectenrekeningtaks",
+      "description": "Een legendarisch beest dat alleen jaagt op de zeer rijken. Als je portefeuille de 1 miljoen euro overschrijdt, duikt hij naar beneden en neemt hij elk jaar een hap.",
+      "strengths": [
+        "Miljonairs",
+        "Rijke Boomers",
+        "Grote Portefeuilles"
+      ],
+      "weaknesses": [
+        "Rekeningen Splitsen",
+        "Vastgoed",
+        "Armoede"
+      ],
+      "attacks": [
+        {
+          "name": "Vermogenshap",
+          "damage": "0,15%",
+          "effect": "Zuigt langzaam grote portefeuilles leeg. Negeert verdediging."
+        }
+      ]
+    },
+    "registratierechten": {
+      "name": "Registratierechten",
+      "officialName": "Registratierechten",
+      "description": "Een enorme golem die de ingang naar het huiseigenaarschap bewaakt. Hij eist een massale som goud voordat hij je doorlaat om een huis te kopen.",
+      "strengths": [
+        "Huizenjagers",
+        "Vastgoedmarkt",
+        "Notarissen"
+      ],
+      "weaknesses": [
+        "Bij je Ouders Wonen",
+        "Eerste kopers (soms)"
+      ],
+      "attacks": [
+        {
+          "name": "Barrière Beuk",
+          "damage": "12%",
+          "effect": "Verplettert je budget voor renovaties."
+        }
+      ]
+    },
+    "turteltaks": {
+      "name": "Turteltaks",
+      "officialName": "Vlaamse Energieheffing",
+      "description": "Een uitgestorven energievampier vernoemd naar een voormalig minister. Hij zoog berucht de portemonnees van Vlaamse gezinnen leeg om groenestroomcertificaten te betalen, voordat hij door rechters werd vernietigd.",
+      "strengths": [
+        "Zonnepaneleneigenaars",
+        "Biomassacentrales"
+      ],
+      "weaknesses": [
+        "Grondwettelijk Hof",
+        "Boze Kiezers",
+        "Advocaten"
+      ],
+      "attacks": [
+        {
+          "name": "Biomassa Zuiger",
+          "damage": "100 HP",
+          "effect": "Een onblokkeerbare vergoeding die je moest betalen gewoon omdat je een elektriciteitsaansluiting had."
+        }
+      ]
+    },
+    "kadastraal_inkomen": {
+      "name": "Kadastraal Inkomen",
+      "officialName": "Kadastraal inkomen",
+      "description": "Een oude spreuk uit 1975 die de huurwaarde van alle Belgische huizen in de tijd bevroor. Elk jaar passen bureaucraten er een verwarrende vermenigvuldiger op toe om je echte belasting te berekenen.",
+      "strengths": [
+        "Tijdreizen",
+        "Jaren '70 Interieur",
+        "Bureaucratie"
+      ],
+      "weaknesses": [
+        "Echte Marktwaarde",
+        "Gezond Verstand",
+        "Nieuwbouw"
+      ],
+      "attacks": [
+        {
+          "name": "Indexatie Boost",
+          "damage": "+224%",
+          "effect": "Blaast een piepklein getal op tot een gigantische belastinggrondslag."
+        }
+      ]
+    },
+    "notionele_interestaftrek": {
+      "name": "Notionele Interestaftrek",
+      "officialName": "Notionele interestaftrek",
+      "description": "Een zeer complexe verdedigingsaura gebruikt door multinationale ondernemingen. Het stelt hen in staat om fantoomintresten af te trekken op geld dat ze nooit daadwerkelijk hebben geleend.",
+      "strengths": [
+        "Holdingmaatschappijen",
+        "AB InBev",
+        "Bedrijfsjuristen"
+      ],
+      "weaknesses": [
+        "Lage Rente",
+        "EU-Regulatoren",
+        "KMO's"
+      ],
+      "attacks": [
+        {
+          "name": "Fantoomaftrek",
+          "damage": "Genees 50 HP",
+          "effect": "Verlaagt de belastbare winst tot nul zonder een cent uit te geven."
+        }
+      ]
+    },
+    "tax_shelter": {
+      "name": "Tax Shelter",
+      "officialName": "Tax Shelter",
+      "description": "Een magische paraplu die bedrijfswinsten beschermt tegen de belastingregen, zolang het geld maar in Belgische filmproducties of videogames wordt gedumpt.",
+      "strengths": [
+        "Belgische Cinema",
+        "Gamestudio's",
+        "Winstgevende Bedrijven"
+      ],
+      "weaknesses": [
+        "Flopfilms",
+        "Slechte Scripts",
+        "Audits"
+      ],
+      "attacks": [
+        {
+          "name": "Cinematografisch Schild",
+          "damage": "0 HP",
+          "effect": "Absorbeert belastingschade door een vreemde arthouse film te produceren."
+        }
+      ]
+    },
+    "flexi_jobs": {
+      "name": "Flexi-Job",
+      "officialName": "Flexi-job",
+      "description": "Een zeldzaam statuseffect waarmee je volledig belastingvrij kan bijklussen. Oorspronkelijk alleen bedoeld om pintjes te tappen, nu voor bijna alles beschikbaar.",
+      "strengths": [
+        "Barmannen",
+        "Gepensioneerden",
+        "Bakkers"
+      ],
+      "weaknesses": [
+        "Voltijdse Contracten",
+        "Vakbonden",
+        "Burn-out"
+      ],
+      "attacks": [
+        {
+          "name": "Onbelast Overwerk",
+          "damage": "Genees 20 HP",
+          "effect": "Genereert pure, onbelaste cash zonder de overheid te voeden."
+        }
+      ]
+    },
+    "indexsprong": {
+      "name": "Indexsprong",
+      "officialName": "Indexsprong",
+      "description": "Een verwoestende ultieme aanval gebruikt door rechtse regeringen. Het bevriest de automatische loonindexering en wist permanent een stuk koopkracht van elke werknemer uit.",
+      "strengths": [
+        "Werkgevers",
+        "Concurrentiepositie",
+        "Rechtse Coalities"
+      ],
+      "weaknesses": [
+        "Vakbonden",
+        "Stakingen",
+        "Inflatie"
+      ],
+      "attacks": [
+        {
+          "name": "Loonbevriezing",
+          "damage": "2% van Inkomen",
+          "effect": "Slaat je level up over, waardoor je statistieken precies hetzelfde blijven terwijl vijanden sterker worden."
+        }
+      ]
+    },
+    "auteursrechten": {
+      "name": "Auteursrechten",
+      "officialName": "Auteursrechten",
+      "description": "Ooit een overpowered glitch waardoor IT-consultants slechts 7,5% belasting betaalden. De devs hebben het in 2023 gepatched, de effectiviteit verlaagd en het beperkt tot echte kunstenaars.",
+      "strengths": [
+        "Journalisten",
+        "Kunstenaars",
+        "Schrijvers"
+      ],
+      "weaknesses": [
+        "IT-Consultants",
+        "De 2023 Patch",
+        "Belastingcontroles"
+      ],
+      "attacks": [
+        {
+          "name": "Creatief Boekhouden",
+          "damage": "Genees 30 HP",
+          "effect": "Zet zwaar belast inkomen om in licht belaste royalty's."
+        }
+      ]
+    },
+    "belastingvrije_som": {
+      "name": "Belastingvrije Som",
+      "officialName": "Belastingvrije som",
+      "description": "Je basisschild. Het beschermt het eerste deel van je inkomsten tegen het Personenbelasting-monster. Kinderen hebben, verhoogt dit schild aanzienlijk.",
+      "strengths": [
+        "Lage Inkomens",
+        "Grote Gezinnen",
+        "Iedereen"
+      ],
+      "weaknesses": [
+        "Inflatie",
+        "Koude Progressie",
+        "Vrijgezel Zijn"
+      ],
+      "attacks": [
+        {
+          "name": "Basisschild",
+          "damage": "Blokkeer 25%",
+          "effect": "Weert de eerste paar aanvallen van de inkomstenbelasting volledig af."
+        }
+      ]
+    }
+  }
+}

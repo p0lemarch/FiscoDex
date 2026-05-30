@@ -1,0 +1,592 @@
+{
+  "app": {
+    "title": "FiscoDex",
+    "subtitle": "Belgian Tax Encyclopedia",
+    "search": "Search taxes...",
+    "allTypes": "All",
+    "backToList": "Back to all taxes",
+    "previous": "Previous",
+    "next": "Next",
+    "description": "Description",
+    "noResults": "No taxes found",
+    "taxCount": "{{count}} entries discovered",
+    "discovered": "Identifizierte Steuern: {{count}} / 153",
+    "unknownTax": "??? - Unentdeckte Steuer",
+    "hp": "KP",
+    "strengths": "Stärken",
+    "weaknesses": "Schwächen",
+    "attacks": "Attacken",
+    "evolution": "Entwicklung",
+    "evolvesFrom": "Entwickelt sich aus",
+    "evolvesTo": "Entwickelt sich zu",
+    "wildEncounter": "Ein wildes {{tax}} erscheint!"
+  },
+  "types": {
+    "income": "Einkommensteuer",
+    "corporate": "Körperschaftsteuer",
+    "consumption": "Verbrauchsteuer",
+    "investment": "Investmentsteuer",
+    "property": "Grundsteuer",
+    "vehicle": "Kfz-Steuer",
+    "energy": "Energieabgabe",
+    "municipal": "Gemeindesteuer",
+    "wealth": "Vermögensteuer",
+    "special": "Sondersteuer",
+    "mechanism": "Mechanismus"
+  },
+  "rarity": {
+    "common": "Häufig",
+    "uncommon": "Ungewöhnlich",
+    "rare": "Selten",
+    "mythical": "Mythisch",
+    "legendary": "Legendär"
+  },
+  "regions": {
+    "federal": "Föderal",
+    "flanders": "Flandern",
+    "wallonia": "Wallonien",
+    "brussels": "Brüssel",
+    "municipal": "Gemeinde",
+    "all": "Alle Regionen"
+  },
+  "taxes": {
+    "personenbelasting": {
+      "name": "Einkommensteuer",
+      "officialName": "Personenbelastung",
+      "description": "Ein unersättliches Biest, das sich vom Bruttogehalt hart arbeitender Bürger ernährt. Es wird stärker, je mehr Sie verdienen, und bestraft den Erfolg mit unerbittlicher Effizienz. Versteckt sich oft hinter vorausgefüllten Steuererklärungen, um die Opfer in falscher Sicherheit zu wiegen.",
+      "strengths": [
+        "Mittelschicht",
+        "Alleinstehende",
+        "Gehaltserhöhungen"
+      ],
+      "weaknesses": [
+        "Panama Papers",
+        "Kreative Buchhalter",
+        "Umzug nach Monaco"
+      ],
+      "attacks": [
+        {
+          "name": "Progressiver Stufenschlag",
+          "damage": "50%",
+          "effect": "Halbiert den Wert Ihrer wohlverdienten Beförderung."
+        },
+        {
+          "name": "Kafkaesker Papierkram",
+          "damage": "10 KP",
+          "effect": "Verwirrt das Ziel. Das Ziel verliert 3 Runden beim Versuch, sich bei Tax-on-Web anzumelden."
+        }
+      ]
+    },
+    "vennootschapsbelasting": {
+      "name": "Körperschaftsteuer",
+      "officialName": "Körperschaftsteuer",
+      "description": "Ein kolossaler Titan, der die Unternehmensgewinne bewacht. Er sieht einschüchternd aus, aber clevere Trainer wissen genau, wie sie ihn mit einer Flut von cleveren Abzügen und Steuertricks beruhigen können.",
+      "strengths": [
+        "Gewinne",
+        "Kleinunternehmen",
+        "Ehrliche Buchführung"
+      ],
+      "weaknesses": [
+        "Multis",
+        "Kaimaninseln",
+        "Verlustvorträge"
+      ],
+      "attacks": [
+        {
+          "name": "Prüfungsgebrüll",
+          "damage": "30 KP",
+          "effect": "Paralysiert das Ziel aus Angst vor einer gründlichen Steuerprüfung."
+        },
+        {
+          "name": "Dividendenabfluss",
+          "damage": "25%",
+          "effect": "Saugt die Einnahmen ab, bevor sie die Aktionäre erreichen."
+        }
+      ]
+    },
+    "btw": {
+      "name": "Mehrwertsteuer",
+      "officialName": "Mehrwertsteuer",
+      "description": "Ein allgegenwärtiges Phantom, das auf jeder Quittung lauert. Es fügt fast allem, was Sie kaufen, stillschweigend 21% hinzu und verschwindet in den Staatskassen, bevor Sie es überhaupt bemerken.",
+      "strengths": [
+        "Verbraucher",
+        "Einzelhändler",
+        "Luxusgüter"
+      ],
+      "weaknesses": [
+        "Schwarzmarkt",
+        "Barzahlungen",
+        "Brot"
+      ],
+      "attacks": [
+        {
+          "name": "Unsichtbarer Aufschlag",
+          "damage": "21%",
+          "effect": "Macht die Endabrechnung unerwartet schmerzhaft."
+        },
+        {
+          "name": "Vierteljährliche Erklärung",
+          "damage": "15 KP",
+          "effect": "Verursacht bei selbstständigen Zielen alle 3 Monate schweren Stress."
+        }
+      ]
+    },
+    "roerende_voorheffing": {
+      "name": "Quellensteuer",
+      "officialName": "Quellensteuer",
+      "description": "Ein flinker Dieb, der 30% Ihrer Dividenden stiehlt, bevor sie überhaupt Ihr Bankkonto erreichen. Er bewegt sich so schnell, dass viele Trainer nicht einmal bemerken, dass sie ausgeraubt wurden.",
+      "strengths": [
+        "Investoren",
+        "Dividenden",
+        "Zinsen"
+      ],
+      "weaknesses": [
+        "Regulierte Sparkonten",
+        "Kapitalerträge",
+        "Nichts besitzen"
+      ],
+      "attacks": [
+        {
+          "name": "Quellenschnapper",
+          "damage": "30%",
+          "effect": "Fängt eingehende Beute ab und schickt sie ans Finanzministerium."
+        }
+      ]
+    },
+    "onroerende_voorheffing": {
+      "name": "Grundsteuer",
+      "officialName": "Grundsteuer",
+      "description": "Ein territorialer Gigant, der jedes Jahr ein Stück Ihres Hauses beansprucht. Seine Macht vervielfacht sich wild, je nachdem, in welche Gemeinde Sie sich verirren.",
+      "strengths": [
+        "Hausbesitzer",
+        "Vermieter",
+        "Große Häuser"
+      ],
+      "weaknesses": [
+        "Mieter",
+        "Bescheidene Wohnungen",
+        "Leben in einem Zelt"
+      ],
+      "attacks": [
+        {
+          "name": "Zuschlags-Schlag",
+          "damage": "Variabel",
+          "effect": "Vervielfacht den Grundschaden basierend auf der Laune des lokalen Bürgermeisters."
+        }
+      ]
+    },
+    "verkeersbelasting": {
+      "name": "Kfz-Steuer",
+      "officialName": "Kfz-Steuer",
+      "description": "Eine sich schnell bewegende Kreatur, die jeden mit einem Nummernschild jagt. Sie hat es gezielt auf die PS und die Emissionen des von Ihnen gewählten Fahrzeugs abgesehen.",
+      "strengths": [
+        "SUVs",
+        "Diesel",
+        "Alte Autos"
+      ],
+      "weaknesses": [
+        "Fahrräder",
+        "Gehen",
+        "E-Autos"
+      ],
+      "attacks": [
+        {
+          "name": "Emissionsabzug",
+          "damage": "20 KP",
+          "effect": "Bestraft Sie dafür, dass Sie keinen Tesla gekauft haben."
+        }
+      ]
+    },
+    "biv": {
+      "name": "Zulassungssteuer",
+      "officialName": "Zulassungssteuer",
+      "description": "Ein unerbittlicher Wächter, der Ihnen den Weg versperrt, wenn Sie versuchen, ein neues Auto anzumelden. Sie müssen sein Lösegeld zahlen, bevor Sie legal auf der Straße fahren dürfen.",
+      "strengths": [
+        "Neuwagen",
+        "Importwagen",
+        "Bleifuß"
+      ],
+      "weaknesses": [
+        "Gebrauchte E-Autos",
+        "Firmenwagen",
+        "Leasing"
+      ],
+      "attacks": [
+        {
+          "name": "Willkommensklatsche",
+          "damage": "Hoch",
+          "effect": "Plündert bei Autokauf sofort Ihr Sparkonto."
+        }
+      ]
+    },
+    "fermette_tax": {
+      "name": "Fermette-Steuer",
+      "officialName": "Keiner",
+      "description": "Ein legendärer Kryptid, über den Politiker oft sprechen, der aber selten in freier Wildbahn gesehen wird. Er bedroht diejenigen, die in ländlichen Gebieten falsche Bauernhäuser gebaut haben.",
+      "strengths": [
+        "Stadtplaner",
+        "Grüne Politiker"
+      ],
+      "weaknesses": [
+        "Wähleraufstand",
+        "Ländliche Bürgermeister",
+        "Die Realität"
+      ],
+      "attacks": [
+        {
+          "name": "Politischer Bluff",
+          "damage": "0 KP",
+          "effect": "Erschreckt das Ziel, bewirkt aber letztendlich absolut nichts."
+        }
+      ]
+    },
+    "accijnzen_brandstoffen": {
+      "name": "Kraftstoffakzisen",
+      "officialName": "Verbrauchsteuern auf Kraftstoffe",
+      "description": "Eine parasitäre Entität, die an jeder Zapfsäule hängt. Sie trinkt Ihr Geld jedes Mal, wenn Sie tanken, und wird dicker, während Ihr Geldbeutel leichter wird.",
+      "strengths": [
+        "Pendler",
+        "Lastwagen",
+        "Winterheizung"
+      ],
+      "weaknesses": [
+        "Fahrräder",
+        "Elektrische Züge",
+        "Home-Office"
+      ],
+      "attacks": [
+        {
+          "name": "Zapfsäulen-Schock",
+          "damage": "35 KP",
+          "effect": "Fügt an der Tankstelle rein psychologischen Schaden zu."
+        }
+      ]
+    },
+    "nettarieven": {
+      "name": "Netztarife",
+      "officialName": "Netztarife",
+      "description": "Ein schattenhaftes Netzwerkmonster, das in Ihrer Stromrechnung lauert. Niemand versteht seine Anatomie wirklich, aber es verschlingt einen massiven Teil Ihrer Energiekosten.",
+      "strengths": [
+        "Winter",
+        "Waschmaschinen",
+        "Spitzenzeiten"
+      ],
+      "weaknesses": [
+        "Sonnenkollektoren",
+        "Leben ohne Stromnetz",
+        "Kerzen"
+      ],
+      "attacks": [
+        {
+          "name": "Kapazitätsspitze",
+          "damage": "45 KP",
+          "effect": "Streckt Sie nieder, wenn Sie es wagen, beim Backen zu bügeln."
+        }
+      ]
+    },
+    "kijk_en_luistergeld": {
+      "name": "Rundfunkgebühr",
+      "officialName": "Rundfunkgebühr",
+      "description": "Ein archaischer Geist der Vergangenheit, der Ihre Fernseh- und Radiogeräte heimsuchte. Er verlangte Tribut nur für das Privileg, Funkwellen zu empfangen.",
+      "strengths": [
+        "Alte Leute",
+        "Röhrenfernseher",
+        "Antennen"
+      ],
+      "weaknesses": [
+        "Internet",
+        "Streaming",
+        "Das 21. Jahrhundert"
+      ],
+      "attacks": [
+        {
+          "name": "Statische Störung",
+          "damage": "15 KP",
+          "effect": "Ein nerviges Summen, das langsam Ihre Geduld raubt."
+        }
+      ]
+    },
+    "zorgpremie": {
+      "name": "Pflegeprämie",
+      "officialName": "Flämische Pflegeprämie",
+      "description": "Die hinterhältige Entwicklung der Rundfunkgebühr. Sie tarnt sich als wohlwollender Heilzauber, ist aber eigentlich eine obligatorische Pauschalsteuer, die jedem Erwachsenen in Flandern auferlegt wird.",
+      "strengths": [
+        "Flämische Regierung",
+        "Alternde Bevölkerung"
+      ],
+      "weaknesses": [
+        "Leben in Wallonien",
+        "Umzug ins Ausland"
+      ],
+      "attacks": [
+        {
+          "name": "Pauschal-Klatsche",
+          "damage": "62 KP",
+          "effect": "Nimmt jedes Jahr einen festen Betrag, unabhängig von Ihrem Einkommen."
+        }
+      ]
+    },
+    "erfbelasting": {
+      "name": "Erbschaftsteuer",
+      "officialName": "Erbschaftsteuer",
+      "description": "Der ultimative Sensenmann der Steuern. Er wartet geduldig am Ende Ihrer Lebensreise, um einen großen Teil von allem zu ernten, was Sie jemals gespart haben.",
+      "strengths": [
+        "Der Tod",
+        "Entfernte Verwandte",
+        "Unvorbereitete Nachlässe"
+      ],
+      "weaknesses": [
+        "Treuhandfonds",
+        "Schenkungen zu Lebzeiten",
+        "Unsterblichkeit"
+      ],
+      "attacks": [
+        {
+          "name": "Grabraub",
+          "damage": "Bis zu 80%",
+          "effect": "Beansprucht einen massiven Teil des Nachlasses, wenn er an einen Nicht-Verwandten geht."
+        }
+      ]
+    },
+    "tob": {
+      "name": "Börsensteuer",
+      "officialName": "Börsenumsatzsteuer",
+      "description": "Ein Mikroparasit, der sich an jeden Handel anheftet. Er knabbert winzige Teile Ihres Kapitals ab, jedes Mal, wenn Sie eine Aktie kaufen oder verkaufen.",
+      "strengths": [
+        "Daytrader",
+        "Panikverkäufe",
+        "ETFs"
+      ],
+      "weaknesses": [
+        "Für immer halten",
+        "Ausländische Broker",
+        "Krypto"
+      ],
+      "attacks": [
+        {
+          "name": "Transaktionsknabbern",
+          "damage": "1,32%",
+          "effect": "Verursacht Knabberschaden bei jedem thesaurierenden Fonds, den Sie anfassen."
+        }
+      ]
+    },
+    "effectenrekeningtaks": {
+      "name": "Wertpapiersteuer",
+      "officialName": "Wertpapierkontensteuer",
+      "description": "Eine legendäre Bestie, die nur die sehr Reichen jagt. Wenn Ihr Portfolio 1 Million Euro übersteigt, stürzt sie herab und beißt jedes Jahr ein Stück ab.",
+      "strengths": [
+        "Millionäre",
+        "Reiche Boomer",
+        "Große Portfolios"
+      ],
+      "weaknesses": [
+        "Konten aufteilen",
+        "Immobilien",
+        "Armut"
+      ],
+      "attacks": [
+        {
+          "name": "Vermögensbiss",
+          "damage": "0,15%",
+          "effect": "Saugt langsam große Portfolios ab. Ignoriert die Verteidigung."
+        }
+      ]
+    },
+    "registratierechten": {
+      "name": "Registrierungsgebühren",
+      "officialName": "Registrierungsgebühren",
+      "description": "Ein massiver Golem, der den Eingang zum Eigenheimbesitz bewacht. Er verlangt eine massive Summe Gold, bevor er Sie passieren und ein Haus kaufen lässt.",
+      "strengths": [
+        "Häuschensucher",
+        "Immobilienmarkt",
+        "Notare"
+      ],
+      "weaknesses": [
+        "Bei den Eltern wohnen",
+        "Erstkäufer (manchmal)"
+      ],
+      "attacks": [
+        {
+          "name": "Barriere-Schlag",
+          "damage": "12%",
+          "effect": "Zerschmettert Ihr Budget für Renovierungen."
+        }
+      ]
+    },
+    "turteltaks": {
+      "name": "Turtel-Steuer",
+      "officialName": "Flämische Energieabgabe",
+      "description": "Ein ausgestorbener Energievampir, benannt nach einer ehemaligen Ministerin. Er saugte bekanntermaßen die Brieftaschen flämischer Haushalte leer, um Zertifikate für grüne Energie zu bezahlen, bevor er von Gerichten gekippt wurde.",
+      "strengths": [
+        "Besitzer von Sonnenkollektoren",
+        "Biomassekraftwerke"
+      ],
+      "weaknesses": [
+        "Verfassungsgerichtshof",
+        "Wütende Wähler",
+        "Anwälte"
+      ],
+      "attacks": [
+        {
+          "name": "Biomasse-Abzug",
+          "damage": "100 KP",
+          "effect": "Eine unblockbare Gebühr, die Sie zahlen mussten, nur weil Sie einen Stromanschluss hatten."
+        }
+      ]
+    },
+    "kadastraal_inkomen": {
+      "name": "Katastereinkommen",
+      "officialName": "Katastereinkommen",
+      "description": "Ein alter Zauberspruch aus dem Jahr 1975, der den Mietwert aller belgischen Häuser in der Zeit eingefroren hat. Jedes Jahr wenden Bürokraten einen verwirrenden Multiplikator an, um Ihre tatsächliche Steuer zu berechnen.",
+      "strengths": [
+        "Zeitreisen",
+        "70er-Jahre-Dekor",
+        "Bürokratie"
+      ],
+      "weaknesses": [
+        "Tatsächlicher Marktwert",
+        "Gesunder Menschenverstand",
+        "Neubauten"
+      ],
+      "attacks": [
+        {
+          "name": "Indexierungs-Boost",
+          "damage": "+224%",
+          "effect": "Bläst eine winzige Zahl zu einer massiven Steuerbemessungsgrundlage auf."
+        }
+      ]
+    },
+    "notionele_interestaftrek": {
+      "name": "Fiktiver Zinsabzug",
+      "officialName": "Notionaler Zinsabzug",
+      "description": "Eine hochkomplexe defensive Aura, die von multinationalen Konzernen genutzt wird. Sie ermöglicht es ihnen, Phantomzinsen auf Geld abzuziehen, das sie sich nie wirklich geliehen haben.",
+      "strengths": [
+        "Holdinggesellschaften",
+        "AB InBev",
+        "Unternehmensanwälte"
+      ],
+      "weaknesses": [
+        "Niedrige Zinsen",
+        "EU-Regulierungsbehörden",
+        "KMUs"
+      ],
+      "attacks": [
+        {
+          "name": "Phantomabzug",
+          "damage": "Heilt 50 KP",
+          "effect": "Reduziert den steuerpflichtigen Gewinn auf Null, ohne einen Cent auszugeben."
+        }
+      ]
+    },
+    "tax_shelter": {
+      "name": "Tax Shelter",
+      "officialName": "Tax Shelter",
+      "description": "Ein magischer Regenschirm, der Unternehmensgewinne vor dem Steuerregen schützt, solange das Geld in belgische Filmproduktionen oder Videospiele gepumpt wird.",
+      "strengths": [
+        "Belgisches Kino",
+        "Spielestudios",
+        "Profitable Unternehmen"
+      ],
+      "weaknesses": [
+        "Flop-Filme",
+        "Schlechte Drehbücher",
+        "Audits"
+      ],
+      "attacks": [
+        {
+          "name": "Kinematografischer Schild",
+          "damage": "0 KP",
+          "effect": "Absorbiert Steuerschäden durch die Produktion eines seltsamen Arthouse-Films."
+        }
+      ]
+    },
+    "flexi_jobs": {
+      "name": "Flexi-Job",
+      "officialName": "Flexi-Job",
+      "description": "Ein seltener Statuseffekt, der es Ihnen ermöglicht, völlig steuerfrei einen Nebenjob auszuüben. Ursprünglich nur zum Bierzapfen gedacht, heute für fast alles verfügbar.",
+      "strengths": [
+        "Barkeeper",
+        "Rentner",
+        "Bäcker"
+      ],
+      "weaknesses": [
+        "Vollzeitverträge",
+        "Gewerkschaften",
+        "Burnout"
+      ],
+      "attacks": [
+        {
+          "name": "Unversteuerte Überstunden",
+          "damage": "Heilt 20 KP",
+          "effect": "Generiert reines, unversteuertes Bargeld, ohne die Regierung zu füttern."
+        }
+      ]
+    },
+    "indexsprong": {
+      "name": "Indexsprung",
+      "officialName": "Indexsprung",
+      "description": "Ein verheerender ultimativer Angriff, der von rechten Regierungen eingesetzt wird. Er friert die automatische Lohnindexierung ein und löscht dauerhaft einen Teil der Kaufkraft jedes Arbeitnehmers.",
+      "strengths": [
+        "Arbeitgeber",
+        "Wettbewerbsfähigkeit",
+        "Rechte Koalitionen"
+      ],
+      "weaknesses": [
+        "Gewerkschaften",
+        "Streiks",
+        "Inflation"
+      ],
+      "attacks": [
+        {
+          "name": "Lohnstopp",
+          "damage": "2% des Einkommens",
+          "effect": "Überspringt Ihr Level-Up und lässt Ihre Werte genau gleich, während die Feinde stärker werden."
+        }
+      ]
+    },
+    "auteursrechten": {
+      "name": "Urheberrechte",
+      "officialName": "Urheberrechte",
+      "description": "Einst ein übermächtiger Glitch, der es IT-Beratern ermöglichte, nur 7,5% Steuern zu zahlen. Die Entwickler haben ihn 2023 gepatcht, seine Wirksamkeit abgeschwächt und ihn auf echte Künstler beschränkt.",
+      "strengths": [
+        "Journalisten",
+        "Künstler",
+        "Schriftsteller"
+      ],
+      "weaknesses": [
+        "IT-Berater",
+        "Der Patch von 2023",
+        "Steuerprüfungen"
+      ],
+      "attacks": [
+        {
+          "name": "Kreative Buchführung",
+          "damage": "Heilt 30 KP",
+          "effect": "Wandelt hoch besteuerte Einkünfte in leicht besteuerte Lizenzgebühren um."
+        }
+      ]
+    },
+    "belastingvrije_som": {
+      "name": "Steuerfreibetrag",
+      "officialName": "Steuerfreier Betrag",
+      "description": "Ihr grundlegender Startschild. Er schützt den ersten Teil Ihres Einkommens vor dem Einkommensteuermonster. Kinder zu haben, erhöht diesen Schild erheblich.",
+      "strengths": [
+        "Niedrige Einkommen",
+        "Großfamilien",
+        "Jeder"
+      ],
+      "weaknesses": [
+        "Inflation",
+        "Kalte Progression",
+        "Single sein"
+      ],
+      "attacks": [
+        {
+          "name": "Basisschild",
+          "damage": "Blockiert 25%",
+          "effect": "Wehrt die ersten Angriffe der Einkommensteuer vollständig ab."
+        }
+      ]
+    }
+  }
+}

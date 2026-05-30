@@ -1,0 +1,592 @@
+{
+  "app": {
+    "title": "FiscoDex",
+    "subtitle": "Belgian Tax Encyclopedia",
+    "search": "Search taxes...",
+    "allTypes": "All",
+    "backToList": "Back to all taxes",
+    "previous": "Previous",
+    "next": "Next",
+    "description": "Description",
+    "noResults": "No taxes found",
+    "taxCount": "{{count}} entries discovered",
+    "discovered": "Taxes Identified: {{count}} / 153",
+    "unknownTax": "??? - Undiscovered Tax",
+    "hp": "HP",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "attacks": "Attacks",
+    "evolution": "Evolution",
+    "evolvesFrom": "Evolves from",
+    "evolvesTo": "Evolves into",
+    "wildEncounter": "A wild {{tax}} appeared!"
+  },
+  "types": {
+    "income": "Income Tax",
+    "corporate": "Corporate Tax",
+    "consumption": "Consumption Tax",
+    "investment": "Investment Tax",
+    "property": "Property Tax",
+    "vehicle": "Vehicle Tax",
+    "energy": "Energy Levy",
+    "municipal": "Municipal Tax",
+    "wealth": "Wealth Tax",
+    "special": "Special Tax",
+    "mechanism": "Mechanism"
+  },
+  "rarity": {
+    "common": "Common",
+    "uncommon": "Uncommon",
+    "rare": "Rare",
+    "mythical": "Mythical",
+    "legendary": "Legendary"
+  },
+  "regions": {
+    "federal": "Federal",
+    "flanders": "Flanders",
+    "wallonia": "Wallonia",
+    "brussels": "Brussels",
+    "municipal": "Municipal",
+    "all": "All Regions"
+  },
+  "taxes": {
+    "personenbelasting": {
+      "name": "Personal Income Tax",
+      "officialName": "Personenbelasting",
+      "description": "A voracious beast that feeds on the gross salary of hard-working citizens. It grows stronger as you earn more, punishing success with relentless efficiency. Often hides behind pre-filled tax forms to lull victims into a false sense of security.",
+      "strengths": [
+        "Middle Class",
+        "Single Workers",
+        "Raises"
+      ],
+      "weaknesses": [
+        "Panama Papers",
+        "Creative Accountants",
+        "Moving to Monaco"
+      ],
+      "attacks": [
+        {
+          "name": "Progressive Bracket Strike",
+          "damage": "50%",
+          "effect": "Halves the value of your well-deserved promotion."
+        },
+        {
+          "name": "Kafkaesque Paperwork",
+          "damage": "10 HP",
+          "effect": "Confuses the target. Target loses 3 turns trying to log into Tax-on-Web."
+        }
+      ]
+    },
+    "vennootschapsbelasting": {
+      "name": "Corporate Income Tax",
+      "officialName": "Vennootschapsbelasting",
+      "description": "A colossal titan that guards corporate profits. It appears intimidating, but savvy trainers know exactly how to pacify it using a barrage of clever deductions and fiscal tricks.",
+      "strengths": [
+        "Profits",
+        "Small Businesses",
+        "Honest Accounting"
+      ],
+      "weaknesses": [
+        "Multinationals",
+        "Cayman Islands",
+        "Loss Carryforwards"
+      ],
+      "attacks": [
+        {
+          "name": "Audit Roar",
+          "damage": "30 HP",
+          "effect": "Paralyzes target with fear of a deep fiscal inspection."
+        },
+        {
+          "name": "Dividend Drain",
+          "damage": "25%",
+          "effect": "Sucks away earnings before they can reach the shareholders."
+        }
+      ]
+    },
+    "btw": {
+      "name": "VAT",
+      "officialName": "Belasting over de toegevoegde waarde",
+      "description": "An omnipresent phantom that lurks on every receipt. It silently adds an extra 21% to almost everything you buy, vanishing into the state's coffers before you even notice.",
+      "strengths": [
+        "Consumers",
+        "Retailers",
+        "Luxury Goods"
+      ],
+      "weaknesses": [
+        "Black Market",
+        "Cash Payments",
+        "Bread"
+      ],
+      "attacks": [
+        {
+          "name": "Invisible Surcharge",
+          "damage": "21%",
+          "effect": "Makes the final bill unexpectedly painful."
+        },
+        {
+          "name": "Quarterly Declaration",
+          "damage": "15 HP",
+          "effect": "Causes severe stress to self-employed targets every 3 months."
+        }
+      ]
+    },
+    "roerende_voorheffing": {
+      "name": "Withholding Tax",
+      "officialName": "Roerende voorheffing",
+      "description": "A nimble thief that steals 30% of your dividends before they even reach your bank account. It moves so fast that many trainers don't even realize they've been robbed.",
+      "strengths": [
+        "Investors",
+        "Dividends",
+        "Interest"
+      ],
+      "weaknesses": [
+        "Regulated Savings Accounts",
+        "Capital Gains",
+        "Holding Nothing"
+      ],
+      "attacks": [
+        {
+          "name": "Source Snatch",
+          "damage": "30%",
+          "effect": "Intercepts incoming loot and sends it to the Treasury."
+        }
+      ]
+    },
+    "onroerende_voorheffing": {
+      "name": "Property Tax",
+      "officialName": "Onroerende voorheffing",
+      "description": "A territorial behemoth that claims a piece of your home every single year. Its power multiplies wildly depending on the municipality you wander into.",
+      "strengths": [
+        "Homeowners",
+        "Landlords",
+        "Big Houses"
+      ],
+      "weaknesses": [
+        "Renters",
+        "Modest Dwellings",
+        "Living in a Tent"
+      ],
+      "attacks": [
+        {
+          "name": "Surcharge Slam",
+          "damage": "Variable",
+          "effect": "Multiplies base damage based on the local mayor's mood."
+        }
+      ]
+    },
+    "verkeersbelasting": {
+      "name": "Road Tax",
+      "officialName": "Verkeersbelasting",
+      "description": "A fast-moving creature that hunts anyone with a license plate. It specifically targets the horsepower and emissions of your chosen vehicle.",
+      "strengths": [
+        "SUVs",
+        "Diesel",
+        "Old Cars"
+      ],
+      "weaknesses": [
+        "Bicycles",
+        "Walking",
+        "EVs"
+      ],
+      "attacks": [
+        {
+          "name": "Emission Drain",
+          "damage": "20 HP",
+          "effect": "Punishes you for not buying a Tesla."
+        }
+      ]
+    },
+    "biv": {
+      "name": "Registration Tax",
+      "officialName": "Belasting op inverkeerstelling",
+      "description": "A fierce gatekeeper that blocks your path when you try to register a new car. You must pay its ransom before you can legally drive on the road.",
+      "strengths": [
+        "New Cars",
+        "Imported Cars",
+        "Heavy Foot"
+      ],
+      "weaknesses": [
+        "Second-hand EVs",
+        "Company Cars",
+        "Leasing"
+      ],
+      "attacks": [
+        {
+          "name": "Welcome Slap",
+          "damage": "High",
+          "effect": "Depletes your savings account instantly upon buying a car."
+        }
+      ]
+    },
+    "fermette_tax": {
+      "name": "Fermette Tax",
+      "officialName": "None",
+      "description": "A legendary cryptid often talked about by politicians but rarely seen in the wild. It threatens those who built fake farmhouses in rural zones.",
+      "strengths": [
+        "Urban Planners",
+        "Green Politicians"
+      ],
+      "weaknesses": [
+        "Voter Backlash",
+        "Rural Mayors",
+        "Reality"
+      ],
+      "attacks": [
+        {
+          "name": "Political Bluff",
+          "damage": "0 HP",
+          "effect": "Scares the target but ultimately does absolutely nothing."
+        }
+      ]
+    },
+    "accijnzen_brandstoffen": {
+      "name": "Fuel Accises",
+      "officialName": "Accijnzen",
+      "description": "A parasitic entity attached to every fuel pump. It drinks your money every time you fill up your tank, getting fatter while your wallet gets lighter.",
+      "strengths": [
+        "Commuters",
+        "Trucks",
+        "Winter Heating"
+      ],
+      "weaknesses": [
+        "Bicycles",
+        "Electric Trains",
+        "Working from Home"
+      ],
+      "attacks": [
+        {
+          "name": "Pump Shock",
+          "damage": "35 HP",
+          "effect": "Inflicts pure psychological damage at the gas station."
+        }
+      ]
+    },
+    "nettarieven": {
+      "name": "Grid Tariffs",
+      "officialName": "Nettarieven",
+      "description": "A shadowy network monster that lurks inside your electricity bill. No one truly understands its anatomy, but it consumes a massive portion of your energy costs.",
+      "strengths": [
+        "Winter",
+        "Washing Machines",
+        "Peak Hours"
+      ],
+      "weaknesses": [
+        "Solar Panels",
+        "Living off the grid",
+        "Candles"
+      ],
+      "attacks": [
+        {
+          "name": "Capacity Peak",
+          "damage": "45 HP",
+          "effect": "Strikes you down if you dare to iron clothes while baking."
+        }
+      ]
+    },
+    "kijk_en_luistergeld": {
+      "name": "TV & Radio Tax",
+      "officialName": "Kijk- en luistergeld",
+      "description": "An archaic ghost of the past that haunted your television and radio sets. It demanded tribute just for the privilege of receiving broadcast waves.",
+      "strengths": [
+        "Old People",
+        "Cathode Ray Tubes",
+        "Antennas"
+      ],
+      "weaknesses": [
+        "Internet",
+        "Streaming",
+        "The 21st Century"
+      ],
+      "attacks": [
+        {
+          "name": "Static Interference",
+          "damage": "15 HP",
+          "effect": "An annoying buzz that slowly drains your patience."
+        }
+      ]
+    },
+    "zorgpremie": {
+      "name": "Care Premium",
+      "officialName": "Vlaamse Zorgpremie",
+      "description": "The sneaky evolution of the TV Tax. It masquerades as a benevolent healing spell, but is actually a mandatory flat tax forced upon every adult in Flanders.",
+      "strengths": [
+        "Flemish Government",
+        "Aging Population"
+      ],
+      "weaknesses": [
+        "Living in Wallonia",
+        "Moving Abroad"
+      ],
+      "attacks": [
+        {
+          "name": "Flat Fee Slap",
+          "damage": "62 HP",
+          "effect": "Takes a fixed amount every year, regardless of your income."
+        }
+      ]
+    },
+    "erfbelasting": {
+      "name": "Inheritance Tax",
+      "officialName": "Erfbelasting",
+      "description": "The ultimate grim reaper of taxes. It waits patiently at the end of your life journey to harvest a chunk of everything you've ever saved.",
+      "strengths": [
+        "Death",
+        "Distant Relatives",
+        "Unprepared Estates"
+      ],
+      "weaknesses": [
+        "Trust Funds",
+        "Gifting while alive",
+        "Immortality"
+      ],
+      "attacks": [
+        {
+          "name": "Grave Robbery",
+          "damage": "Up to 80%",
+          "effect": "Claims a massive portion of the estate if passed to a non-relative."
+        }
+      ]
+    },
+    "tob": {
+      "name": "Stock Exchange Tax",
+      "officialName": "Taks op beursverrichtingen",
+      "description": "A micro-parasite that attaches to every trade. It nibbles tiny bits of your capital every time you buy or sell a stock.",
+      "strengths": [
+        "Day Traders",
+        "Panic Selling",
+        "ETFs"
+      ],
+      "weaknesses": [
+        "Holding Forever",
+        "Foreign Brokers",
+        "Crypto"
+      ],
+      "attacks": [
+        {
+          "name": "Transaction Nibble",
+          "damage": "1.32%",
+          "effect": "Causes chip damage on every single accumulating fund you touch."
+        }
+      ]
+    },
+    "effectenrekeningtaks": {
+      "name": "Securities Tax",
+      "officialName": "Effectenrekeningtaks",
+      "description": "A legendary beast that only hunts the very wealthy. If your portfolio exceeds 1 million euros, it swoops down and takes a bite every year.",
+      "strengths": [
+        "Millionaires",
+        "Rich Boomers",
+        "Big Portfolios"
+      ],
+      "weaknesses": [
+        "Splitting Accounts",
+        "Real Estate",
+        "Poverty"
+      ],
+      "attacks": [
+        {
+          "name": "Wealth Bite",
+          "damage": "0.15%",
+          "effect": "Slowly drains large portfolios. Ignores defense."
+        }
+      ]
+    },
+    "registratierechten": {
+      "name": "Registration Duties",
+      "officialName": "Registratierechten",
+      "description": "A massive golem guarding the entrance to homeownership. It demands a massive lump sum of gold before allowing you to pass and buy a house.",
+      "strengths": [
+        "House Hunters",
+        "Real Estate Market",
+        "Notaries"
+      ],
+      "weaknesses": [
+        "Living with Parents",
+        "First-time buyers (sometimes)"
+      ],
+      "attacks": [
+        {
+          "name": "Barrier Slam",
+          "damage": "12%",
+          "effect": "Crushes your budget for renovations."
+        }
+      ]
+    },
+    "turteltaks": {
+      "name": "Turtel Tax",
+      "officialName": "Vlaamse Energieheffing",
+      "description": "An extinct energy vampire named after a former minister. It famously drained the wallets of Flemish households to pay for green energy certificates before being struck down by courts.",
+      "strengths": [
+        "Solar Panel Owners",
+        "Biomass Plants"
+      ],
+      "weaknesses": [
+        "Constitutional Court",
+        "Angry Voters",
+        "Lawyers"
+      ],
+      "attacks": [
+        {
+          "name": "Biomass Drain",
+          "damage": "100 HP",
+          "effect": "An unblockable fee that you had to pay just for having an electricity connection."
+        }
+      ]
+    },
+    "kadastraal_inkomen": {
+      "name": "Cadastral Income",
+      "officialName": "Kadastraal inkomen",
+      "description": "An ancient spell cast in 1975 that froze the rental value of all Belgian homes in time. Every year, bureaucrats apply a confusing multiplier to it to calculate your real tax.",
+      "strengths": [
+        "Time Travel",
+        "1970s Decor",
+        "Bureaucracy"
+      ],
+      "weaknesses": [
+        "Actual Market Value",
+        "Common Sense",
+        "New Builds"
+      ],
+      "attacks": [
+        {
+          "name": "Indexation Boost",
+          "damage": "+224%",
+          "effect": "Inflates a tiny number into a massive tax base."
+        }
+      ]
+    },
+    "notionele_interestaftrek": {
+      "name": "Notional Interest",
+      "officialName": "Notionele interestaftrek",
+      "description": "A highly complex defensive aura used by multinational corporations. It allows them to deduct phantom interest on money they never actually borrowed.",
+      "strengths": [
+        "Holding Companies",
+        "AB InBev",
+        "Corporate Lawyers"
+      ],
+      "weaknesses": [
+        "Low Interest Rates",
+        "EU Regulators",
+        "SMEs"
+      ],
+      "attacks": [
+        {
+          "name": "Phantom Deduction",
+          "damage": "Heal 50 HP",
+          "effect": "Reduces taxable profits to zero without spending a dime."
+        }
+      ]
+    },
+    "tax_shelter": {
+      "name": "Tax Shelter",
+      "officialName": "Tax Shelter",
+      "description": "A magical umbrella that protects corporate profits from the tax rain, as long as the money is dumped into Belgian movie productions or video games.",
+      "strengths": [
+        "Belgian Cinema",
+        "Game Studios",
+        "Profitable Companies"
+      ],
+      "weaknesses": [
+        "Flop Movies",
+        "Bad Scripts",
+        "Audits"
+      ],
+      "attacks": [
+        {
+          "name": "Cinematic Shield",
+          "damage": "0 HP",
+          "effect": "Absorbs tax damage by producing a weird arthouse film."
+        }
+      ]
+    },
+    "flexi_jobs": {
+      "name": "Flexi-Job",
+      "officialName": "Flexi-job",
+      "description": "A rare status effect that lets you work a side hustle completely tax-free. Originally meant just for pouring beers, now available for almost everything.",
+      "strengths": [
+        "Bartenders",
+        "Pensioners",
+        "Bakers"
+      ],
+      "weaknesses": [
+        "Full-time Contracts",
+        "Unions",
+        "Burnout"
+      ],
+      "attacks": [
+        {
+          "name": "Untaxed Overtime",
+          "damage": "Heal 20 HP",
+          "effect": "Generates pure, untaxed cash without feeding the government."
+        }
+      ]
+    },
+    "indexsprong": {
+      "name": "Index Skip",
+      "officialName": "Indexsprong",
+      "description": "A devastating ultimate attack used by right-wing governments. It freezes the automatic wage indexation, permanently deleting a chunk of purchasing power from every worker.",
+      "strengths": [
+        "Employers",
+        "Competitiveness",
+        "Right-wing Coalitions"
+      ],
+      "weaknesses": [
+        "Labor Unions",
+        "Strikes",
+        "Inflation"
+      ],
+      "attacks": [
+        {
+          "name": "Wage Freeze",
+          "damage": "2% of Income",
+          "effect": "Skips your level up, keeping your stats exactly the same while enemies get stronger."
+        }
+      ]
+    },
+    "auteursrechten": {
+      "name": "Copyright Regime",
+      "officialName": "Auteursrechten",
+      "description": "Once an overpowered glitch that allowed IT consultants to pay only 7.5% tax. The devs patched it in 2023, nerfing its effectiveness and restricting it to actual artists.",
+      "strengths": [
+        "Journalists",
+        "Artists",
+        "Writers"
+      ],
+      "weaknesses": [
+        "IT Consultants",
+        "The 2023 Patch",
+        "Tax Audits"
+      ],
+      "attacks": [
+        {
+          "name": "Creative Accounting",
+          "damage": "Heal 30 HP",
+          "effect": "Converts heavily taxed income into lightly taxed royalties."
+        }
+      ]
+    },
+    "belastingvrije_som": {
+      "name": "Tax-Free Allowance",
+      "officialName": "Belastingvrije som",
+      "description": "Your basic starter shield. It protects the first chunk of your earnings from the Personal Income Tax monster. Having kids levels up this shield significantly.",
+      "strengths": [
+        "Low Incomes",
+        "Large Families",
+        "Everyone"
+      ],
+      "weaknesses": [
+        "Inflation",
+        "Bracket Creep",
+        "Being Single"
+      ],
+      "attacks": [
+        {
+          "name": "Basic Shield",
+          "damage": "Block 25%",
+          "effect": "Deflects the first few attacks from income tax completely."
+        }
+      ]
+    }
+  }
+}

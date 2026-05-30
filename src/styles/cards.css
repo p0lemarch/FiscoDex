@@ -1,0 +1,214 @@
+/* ============================================================
+   FiscoDex — Retro 8-Bit Card Components
+   ============================================================ */
+
+.tax-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 600px) {
+  .tax-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .tax-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .tax-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Empty & Loading States ────────────────────────────────── */
+.tax-grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--bg-card);
+  border: var(--border-thick);
+  font-family: var(--font-heading);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+}
+
+.tax-grid__empty-text {
+  font-size: 1rem;
+  margin-top: var(--space-4);
+}
+
+/* ── Tax Card (Retro Trading Card) ─────────────────────────── */
+.tax-card {
+  --card-color: #a8a878;
+  
+  background: #f8d030; /* Classic yellow border of old cards */
+  border: var(--border-thick);
+  padding: var(--space-2);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+.tax-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+}
+
+.tax-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+/* Inner content area */
+.tax-card__content {
+  background: var(--bg-primary);
+  border: var(--border-thin);
+  padding: var(--space-3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Card Header (Name & HP) ───────────────────────────────── */
+.tax-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.tax-card__name {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.tax-card__hp {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  color: #dc0a2d; /* Red HP */
+}
+
+/* ── Portrait Area (Screen) ────────────────────────────────── */
+.tax-card__portrait {
+  background: var(--screen-bg);
+  border: var(--border-thick);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  box-shadow: inset 4px 4px 0 rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grid lines for retro screen effect */
+.tax-card__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(15, 56, 15, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(15, 56, 15, 0.1) 1px, transparent 1px);
+  background-size: 4px 4px;
+  pointer-events: none;
+}
+
+.tax-card__icon {
+  font-size: 3rem;
+  opacity: 0.8;
+  filter: grayscale(100%) contrast(200%); /* Make emojis look blockier/older */
+}
+
+/* ── Silhouettes (Undiscovered) ────────────────────────────── */
+.tax-card--undiscovered {
+  background: #a0a0a0;
+  pointer-events: none;
+}
+
+.tax-card--undiscovered .tax-card__content {
+  background: #d0d0d0;
+}
+
+.tax-card--undiscovered .tax-card__icon {
+  color: transparent;
+  text-shadow: 0 0 0 var(--screen-dark);
+}
+
+.tax-card--undiscovered .tax-card__name {
+  color: #757575;
+}
+
+/* ── Info Bar ──────────────────────────────────────────────── */
+.tax-card__info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+  border: 1px solid #1a1a1a;
+  padding: 2px 4px;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.tax-card__dex-number {
+  color: #4a4a4a;
+}
+
+/* ── Badges ────────────────────────────────────────────────── */
+.tax-card__badges {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: auto;
+}
+
+.type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  background: var(--card-color);
+  border: 2px solid #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  text-transform: uppercase;
+}
+
+.type-badge__icon {
+  font-size: 0.7rem;
+}
+
+.rarity-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border: 2px solid #1a1a1a;
+  font-family: var(--font-heading);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Rarity specific borders/colors */
+.tax-card--legendary {
+  background: #e0c068; /* Gold border */
+}
+
+.tax-card--mythical {
+  background: #f85888; /* Pink border */
+}

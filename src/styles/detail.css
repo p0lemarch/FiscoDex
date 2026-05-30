@@ -1,0 +1,222 @@
+/* ============================================================
+   FiscoDex — Retro 8-Bit Detail Page
+   ============================================================ */
+
+.detail-page {
+  --detail-color: #a8a878;
+  
+  min-height: 100vh;
+  background-color: var(--bg-pokedex);
+  padding: var(--space-4);
+  font-family: var(--font-body);
+}
+
+.detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--bg-primary);
+  border: var(--border-thick);
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    flex-direction: row;
+  }
+}
+
+/* ── Left Column (Portrait & Basic Info) ───────────────────── */
+.detail-left {
+  padding: var(--space-4);
+  border-bottom: var(--border-thick);
+  background: #dedede;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .detail-left {
+    border-bottom: none;
+    border-right: var(--border-thick);
+    max-width: 350px;
+  }
+}
+
+.detail-portrait {
+  background: var(--screen-bg);
+  border: var(--border-thick);
+  border-radius: 10px 10px 10px 40px; /* Classic pokedex screen shape */
+  padding: var(--space-4);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  box-shadow: inset 6px 6px 0 rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.detail-portrait__icon {
+  font-size: 5rem;
+  filter: grayscale(100%) contrast(200%);
+}
+
+.detail-info-box {
+  background: #fff;
+  border: var(--border-thick);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.detail-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.detail-dex {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.detail-hp {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: #dc0a2d;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #1a1a1a;
+  padding-top: var(--space-2);
+}
+
+/* ── Right Column (Stats & Attacks) ────────────────────────── */
+.detail-right {
+  padding: var(--space-4);
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.detail-section {
+  background: #fff;
+  border: var(--border-thick);
+  padding: var(--space-3);
+}
+
+.detail-section__title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: #fff;
+  background: #1a1a1a;
+  display: inline-block;
+  padding: 4px 8px;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.detail-description {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-bottom: 2px dashed #1a1a1a;
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+/* ── Attacks List ──────────────────────────────────────────── */
+.attack-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.attack-item {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #1a1a1a;
+  padding: var(--space-2);
+  background: #f8f8f8;
+}
+
+.attack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+}
+
+.attack-damage {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+}
+
+.attack-effect {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* ── Weaknesses & Strengths ────────────────────────────────── */
+.matchups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.matchup-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.matchup-title {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  margin-bottom: var(--space-2);
+}
+
+.matchup-list {
+  list-style: square inside;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* ── Evolution ─────────────────────────────────────────────── */
+.evolution-box {
+  background: #e0e0e0;
+  border: var(--border-thick);
+  padding: var(--space-3);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+}
+
+.evolution-arrow {
+  display: block;
+  font-size: 2rem;
+  margin: var(--space-2) 0;
+}
+
+/* ── Navigation ────────────────────────────────────────────── */
+.detail-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  background: #1a1a1a;
+  color: #fff;
+  border: 4px solid #fff;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 4px #1a1a1a;
+}
