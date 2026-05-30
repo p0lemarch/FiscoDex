@@ -1,0 +1,272 @@
+/* ============================================================
+   FiscoDex — Retro 8-Bit Global Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  /* Retro Pokédex Colors */
+  --bg-primary: #f0f0f0;
+  --bg-secondary: #dedede;
+  --bg-card: #ffffff;
+  --bg-pokedex: #dc0a2d; /* Classic Red */
+  --bg-pokedex-dark: #8b0000;
+  --screen-bg: #9bbc0f; /* Gameboy Screen Green */
+  --screen-dark: #0f380f;
+  
+  /* Blocky Borders */
+  --border-thick: 4px solid #1a1a1a;
+  --border-thin: 2px solid #1a1a1a;
+  --border-radius: 0px; /* No rounded corners in retro games, or very pixelated */
+  
+  /* Typography */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-light: #ffffff;
+  --text-screen: #0f380f;
+  
+  --font-heading: 'Press Start 2P', monospace;
+  --font-body: 'VT323', monospace;
+  
+  /* Type Colors (Vibrant Retro) */
+  --type-income: #f8d030;
+  --type-corporate: #6890f0;
+  --type-consumption: #78c850;
+  --type-investment: #98d8d8;
+  --type-property: #f08030;
+  --type-vehicle: #f05030;
+  --type-energy: #f85888;
+  --type-municipal: #a890f0;
+  --type-wealth: #e0c068;
+  --type-special: #f85888;
+  --type-mechanism: #a8a878;
+  
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  background-color: var(--bg-pokedex);
+  color: var(--text-primary);
+  line-height: 1.4;
+  /* Retro background pattern */
+  background-image: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05)), linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05));
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+/* ── Typography Utilities ──────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* ── Form Controls (Retro) ─────────────────────────────────── */
+button, input {
+  font-family: var(--font-heading);
+  border: var(--border-thick);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+input {
+  cursor: text;
+  font-size: 0.8rem;
+}
+
+/* ── App Header ────────────────────────────────────────────── */
+.app-header {
+  background: var(--bg-pokedex-dark);
+  border-bottom: var(--border-thick);
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  position: relative;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+}
+
+.app-title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Big blue eye indicator */
+.app-title::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #3b82f6;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #1a1a1a, inset -4px -4px 0 rgba(0,0,0,0.2);
+}
+
+/* ── Tracker ───────────────────────────────────────────────── */
+.tracker {
+  background: var(--screen-bg);
+  color: var(--screen-dark);
+  padding: var(--space-2) var(--space-4);
+  border: var(--border-thick);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  box-shadow: inset 4px 4px 0 rgba(0,0,0,0.1);
+}
+
+/* ── Language Toggle (Blocky) ──────────────────────────────── */
+.lang-switcher {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.lang-switcher__option {
+  font-size: 0.6rem;
+  padding: var(--space-2);
+  background: #e0e0e0;
+  border: var(--border-thin);
+}
+
+.lang-switcher__option--active {
+  background: #f8d030;
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+/* ── Search & Filter ───────────────────────────────────────── */
+.search-filter-section {
+  background: var(--bg-primary);
+  border: var(--border-thick);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: var(--space-3);
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filter-pill {
+  font-size: 0.6rem;
+  padding: var(--space-2) var(--space-3);
+}
+
+.filter-pill--active {
+  background: var(--pill-color, #1a1a1a);
+  color: #fff;
+  border-color: var(--pill-color, #1a1a1a);
+}
+
+/* ── Random Events ─────────────────────────────────────────── */
+.wild-encounter-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flash 0.5s infinite;
+}
+
+.wild-encounter-box {
+  background: var(--bg-card);
+  border: 6px solid #1a1a1a;
+  padding: var(--space-6);
+  text-align: center;
+  max-width: 500px;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.wild-encounter-box h2 {
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.wild-encounter-box button {
+  font-size: 1rem;
+  padding: var(--space-3) var(--space-6);
+  background: #f05030;
+  color: #fff;
+}
+/* -- Badge Case ---------------------------------------------- */
+.badge-case {
+  background: var(--bg-primary);
+  border: var(--border-thick);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+}
+.badge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+@media (min-width: 768px) {
+  .badge-grid { grid-template-columns: 1fr 1fr; }
+}
+.badge-item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: var(--border-thin);
+  background: var(--bg-card);
+}
+.badge-item--locked { filter: grayscale(100%); opacity: 0.7; }
+.badge-icon { font-size: 3rem; }
+.badge-details h3 { font-size: 0.9rem; margin-bottom: var(--space-1); }
+.badge-desc { font-size: 0.9rem; margin-bottom: var(--space-2); }
+.badge-claim-btn { font-size: 0.7rem; padding: 4px 8px; background: #78c850; color: #fff; }
+.badge-status { font-family: var(--font-heading); font-size: 0.7rem; color: #78c850; }

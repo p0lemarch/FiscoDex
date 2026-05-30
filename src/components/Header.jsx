@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { taxes } from '../data/taxes.js';
+import { useAppContext } from '../context/AppContext.jsx';
 
 const LANGUAGES = [
   { code: 'nl', label: 'NL' },
@@ -28,6 +29,8 @@ function LanguageSwitcher() {
 
 export default function Header() {
   const { t } = useTranslation();
+  const { theme, toggleTheme } = useAppContext();
+
   return (
     <header className="app-header">
       <div className="app-title">
@@ -36,7 +39,16 @@ export default function Header() {
       <div className="tracker">
         {t('app.discovered', { count: taxes.length })}
       </div>
-      <LanguageSwitcher />
+      <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+        <button 
+          onClick={toggleTheme} 
+          style={{ padding: '8px', fontSize: '1.2rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '8px', cursor: 'pointer' }}
+          title="Toggle Theme"
+        >
+          {theme === 'retro' ? '🕹️ Retro' : '🔮 Modern'}
+        </button>
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 }

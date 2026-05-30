@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import BadgeCase from '../components/BadgeCase.jsx';
 import { useTranslation } from 'react-i18next';
 import { taxes } from '../data/taxes.js';
 import SearchBar from '../components/SearchBar.jsx';
@@ -76,6 +77,13 @@ function Home() {
           </div>
         </div>
       )}
+
+      {/* Tagline */}
+      <div style={{ textAlign: 'center', margin: '2rem 0', padding: '1rem', background: 'var(--bg-primary)', border: 'var(--border-thick)', boxShadow: '6px 6px 0 rgba(0,0,0,0.2)' }} className="tagline-banner">
+        <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-primary)', fontSize: '2rem', fontStyle: 'italic', textTransform: 'uppercase' }}>Gotta pay 'em all!</h2>
+      </div>
+
+      <BadgeCase />
 
       <div className="search-filter-section">
         <SearchBar value={searchQuery} onChange={setSearchQuery} />

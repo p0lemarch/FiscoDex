@@ -1,0 +1,243 @@
+/* ============================================================
+   FiscoDex — Modern Glassmorphism Theme (V1)
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+body.theme-modern {
+  --bg-primary: #0F172A; /* Deep Navy */
+  --bg-secondary: #1E293B;
+  --bg-card: rgba(30, 41, 59, 0.6);
+  --bg-pokedex: #0F172A;
+  --bg-pokedex-dark: #0f172a;
+  
+  --border-thick: 1px solid rgba(255, 255, 255, 0.1);
+  --border-thin: 1px solid rgba(255, 255, 255, 0.05);
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-light: #ffffff;
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  background-color: var(--bg-primary);
+  background-image: none; /* Remove retro grid */
+  color: var(--text-primary);
+}
+
+/* Base Overrides */
+body.theme-modern * {
+  box-shadow: none; /* Remove harsh retro shadows */
+}
+
+/* Header */
+body.theme-modern .app-header {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.theme-modern .app-title {
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+body.theme-modern .app-title::before {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Form Controls */
+body.theme-modern button, 
+body.theme-modern input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+body.theme-modern input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+/* Search Filter */
+body.theme-modern .search-filter-section {
+  background: transparent;
+  border: none;
+}
+body.theme-modern .search-bar input {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  text-transform: none;
+}
+body.theme-modern .filter-pill {
+  border-radius: 20px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+}
+body.theme-modern .filter-pill--active {
+  background: var(--pill-color, #3b82f6);
+  color: #fff;
+}
+
+/* Cards */
+body.theme-modern .tax-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+}
+body.theme-modern .tax-card__content {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+body.theme-modern .tax-card__header {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+body.theme-modern .tax-card__name {
+  color: #fff;
+  font-size: 1.25rem;
+}
+body.theme-modern .tax-card__hp {
+  color: var(--card-color);
+}
+body.theme-modern .tax-card__portrait {
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border: none;
+  box-shadow: none;
+}
+body.theme-modern .tax-card__portrait::after {
+  display: none;
+}
+body.theme-modern .tax-card__icon {
+  filter: none; /* Keep emojis colorful */
+}
+body.theme-modern .tax-card__info-bar {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+}
+body.theme-modern .type-badge,
+body.theme-modern .rarity-badge {
+  border-radius: 4px;
+  border: none;
+}
+body.theme-modern .rarity-badge {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+body.theme-modern .tax-card--legendary {
+  box-shadow: 0 0 20px rgba(224, 192, 104, 0.2);
+  border: 1px solid rgba(224, 192, 104, 0.5);
+}
+
+/* Detail Page */
+body.theme-modern .detail-container {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+body.theme-modern .detail-left {
+  background: transparent;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+body.theme-modern .detail-info-box {
+  background: transparent;
+  border: none;
+}
+body.theme-modern .detail-name {
+  color: #fff;
+  font-size: 2rem;
+}
+body.theme-modern .detail-hp {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+body.theme-modern .evolution-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+body.theme-modern .detail-section {
+  background: transparent;
+  border: none;
+}
+body.theme-modern .detail-section__title {
+  background: transparent;
+  border-left: 4px solid #3b82f6;
+  color: #fff;
+  padding-left: 12px;
+}
+body.theme-modern .detail-description {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+body.theme-modern .attack-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+body.theme-modern .back-button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 8px;
+}
+
+/* Tracker & Tags */
+body.theme-modern .tracker {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+body.theme-modern .lang-switcher__option {
+  border-radius: 4px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+body.theme-modern .lang-switcher__option--active {
+  background: #3b82f6;
+}
+/* -- Badge Case (Modern) ------------------------------------- */
+body.theme-modern .badge-case {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+body.theme-modern .badge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  body.theme-modern .badge-grid { grid-template-columns: 1fr 1fr; }
+}
+body.theme-modern .badge-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+}
+body.theme-modern .badge-item--locked { filter: grayscale(100%); opacity: 0.5; }
+body.theme-modern .badge-icon { font-size: 3rem; }
+body.theme-modern .badge-details h3 { font-family: var(--font-heading); font-size: 1.1rem; color: #fff; }
+body.theme-modern .badge-desc { font-family: var(--font-body); font-size: 0.9rem; color: var(--text-muted); }
+body.theme-modern .badge-claim-btn {
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #fff;
+  cursor: pointer;
+}
+body.theme-modern .badge-status { color: #10B981; font-weight: bold; }
